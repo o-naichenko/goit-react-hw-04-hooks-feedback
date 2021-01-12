@@ -1,23 +1,16 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import "./App.css";
-import FeedbackOptions from "./components/Feedback-options";
-import NotificationMessage from "./components/Notification-message";
+import FeedbackOptions from "./components/FeedbackOptions";
+import NotificationMessage from "./components/NotificationMessage";
 import Section from "./components/Section";
 import Statistics from "./components/Statistics";
 
+const optionsNames = ["good", "neutral", "bad"];
 export default function App() {
-  // state = {
-  //   good: 0,
-  //   neutral: 0,
-  //   bad: 0,
-  // };
-
   const [good, setGood] = useState(0);
   const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
-
-  const optionsNames = ["good", "neutral", "bad"];
 
   const onLeaveFeedback = (option) => {
     switch (option) {

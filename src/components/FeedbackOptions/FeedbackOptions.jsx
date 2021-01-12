@@ -1,7 +1,6 @@
-// import React from "react";
 import React from "react";
 import PropTypes from "prop-types";
-import s from "./Feedback-options.module.css";
+import s from "./FeedbackOptions.module.css";
 
 export default function FeedbackOptions({ options, onLeaveFeedback }) {
   return options.map((option) => (
